@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Assignment 3: Exercise 1</title>
+            <script src="exercise_1.js"></script>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <h2>Listing Prime Numbers</h2>
+            <hr>
+            <p>
+                <!--setting the 'target' attribute to '_blank' allows the link to open in a new tab-->
+                Choose an integer <i>n</i> and get all <a href="https://en.wikipedia.org/wiki/Prime_number" target="_blank">prime numbers</a>
+                that are less than or equal to <i>n</i>
+            </p>
+            <form onsubmit="return false">
+                <input type="number" id="integer" name="integer" placeholder="Type an integer" min="2" required>
+                <button onclick="display_primes(document.getElementById('integer').value)">OK</button>
+            </form>
+            <br>
+            <hr>
+            <div style="visibility:hidden">
+                <table class="styled-table" id="table_prime_numbers">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Prime</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </body>
+    </html>
